@@ -13,6 +13,8 @@
 #define MICROPY_HW_ENABLE_DAC       (1)
 #define MICROPY_HW_ENABLE_USB       (1)
 #define MICROPY_HW_ENABLE_CAN       (1)
+#define MODULE_CRC16_ENABLED        (1)
+#define MODULE_CHECKSUM_ENABLED    (1)
 
 #define MICROPY_BOARD_EARLY_INIT    STM32F722VE_board_early_init
 void STM32F722VE_board_early_init(void);
@@ -39,8 +41,8 @@ void STM32F722VE_board_early_init(void);
 // I2C busses
 #define MICROPY_HW_I2C1_SCL         (pin_B8)
 #define MICROPY_HW_I2C1_SDA         (pin_B9)
-#define MICROPY_HW_I2C3_SCL         (pin_B10)
-#define MICROPY_HW_I2C3_SDA         (pin_B11)
+#define MICROPY_HW_I2C2_SCL         (pin_B10)
+#define MICROPY_HW_I2C2_SDA         (pin_B11)
 
 // SPI
 #define MICROPY_HW_SPI4_NSS         (pin_E11)
