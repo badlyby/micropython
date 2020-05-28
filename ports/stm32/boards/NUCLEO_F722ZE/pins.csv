@@ -102,4 +102,7 @@ UART6_RX,PG9
 SPI_B_NSS,PA4
 SPI_B_SCK,PB3
 SPI_B_MOSI,PB5
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
