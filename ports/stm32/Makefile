@@ -404,6 +404,22 @@ else
 ifeq ($(MCU_SERIES),$(filter $(MCU_SERIES),f0 f4 f7 h7 l4))
     SRC_HAL += $(addprefix $(HAL_DIR)/Src/stm32$(MCU_SERIES)xx_, hal_can.c)
 endif
+
+ifeq ($(MICROPY_PY_CRC16),1)
+CFLAGS += -DMODULE_CRC16_ENABLED
+EXTMOD_SRC_C += extmod/crc16.c
+endif
+
+ifeq ($(MICROPY_PY_CHECKSUM),1)
+CFLAGS += -DMODULE_CHECKSUM_ENABLED
+EXTMOD_SRC_C += extmod/checksum.c
+endif
+
+ifeq ($(MICROPY_PY_BKPRAM),1)
+CFLAGS += -DMODULE_BKPRAM_ENABLED
+EXTMOD_SRC_C += extmod/bkpram.c
+endif
+
 endif
 
 SRC_USBDEV = $(addprefix $(USBDEV_DIR)/,\

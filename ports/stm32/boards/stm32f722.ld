@@ -7,11 +7,7 @@ MEMORY
 {
     FLASH (rx)      : ORIGIN = 0x08000000, LENGTH = 512K
     FLASH_ISR (rx)  : ORIGIN = 0x08000000, LENGTH = 16K     /* sector 0, 16K */
-<<<<<<< HEAD
     FLASH_FS (r)    : ORIGIN = 0x08004000, LENGTH = 112K     /* sectors 1-4 3*16KiB 1*64KiB*/
-=======
-    FLASH_FS (r)    : ORIGIN = 0x08004000, LENGTH = 112K    /* sectors 1-4 3*16KiB 1*64KiB*/
->>>>>>> upstream/master
     FLASH_TEXT (rx) : ORIGIN = 0x08020000, LENGTH = 384K    /* sectors 5-7 3*128KiB = 384K */
     DTCM (xrw)      : ORIGIN = 0x20000000, LENGTH = 64K     /* Used for storage cache */
     RAM (xrw)       : ORIGIN = 0x20010000, LENGTH = 192K    /* SRAM1 = 176K, SRAM2 = 16K */
