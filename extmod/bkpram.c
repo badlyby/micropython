@@ -14,7 +14,7 @@ const bkpram_mem_obj_t bkpram_mem32_obj = {{&bkpram_mem_type}, 4};
 STATIC uintptr_t bkpram_mem_get_addr(mp_obj_t addr_o, uint align) {
     uintptr_t addr = mp_obj_int_get_truncated(addr_o);
     if ((addr & (align - 1)) != 0) {
-        nlr_raise(mp_obj_new_exception_msg_varg(&mp_type_ValueError, "address %08x is not aligned to %d bytes", addr, align));
+        nlr_raise(mp_obj_new_exception_msg_varg(&mp_type_ValueError, MP_ERROR_TEXT("address %08x is not aligned to %d bytes"), addr, align));
     }
     return addr;
 }
